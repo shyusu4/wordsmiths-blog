@@ -9,7 +9,7 @@ describe Like, type: :model do
     end
 
     it 'comments author should equal user who made the comment' do
-        expect(@comment.author).to eq @user
+      expect(@comment.author).to eq @user
     end
   end
 end
