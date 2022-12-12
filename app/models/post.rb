@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :comments, foreign_key: 'post_id'
-  has_many :likes, foreign_key: 'post_id'
+  belongs_to :author, class_name: 'User'
+  has_many :comments
+  has_many :likes
   after_save :update_posts_counter
 
   validates :title, presence: true, length: { minimum: 1, maximum: 250 }
@@ -9,7 +9,7 @@ class Post < ApplicationRecord
   validates :likes_counter, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
   def update_posts_counter
-    post.increment!(:posts_counter)
+    author.increment!(:posts_counter)
   end
 
   def recent_comments
