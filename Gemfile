@@ -47,6 +47,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # gem "sassc-rails"
 
 # Rspec rails
+gem 'rails-controller-testing'
+
 group :development, :test do
   gem 'rspec-rails', '>= 3.9.0'
 end
