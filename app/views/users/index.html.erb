@@ -1,1 +1,15 @@
-<h1> List of users </h1>
+<h1>Blog App</h1>
+<div class="users-container">
+    <% @users.each do |user| %>
+        <div class="user-item" href="users/<%= user.id %>">
+            <img class="user-img" src=<%= user.photo %> alt=<%= user.name %>>
+            <div class="user-item__content">
+                <h3 class="username"><%= user.name %></h3>
+                <p><%= user.bio[0..100] %></p>
+                <div class="postscount">
+                    <p>Number of posts: <%= user.posts.count %></p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
