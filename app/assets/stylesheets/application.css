@@ -55,6 +55,19 @@ h1 {
   border-radius: 5px;
 }
 
+.username {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.username:hover {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #219ebc;
+}
+
 .postscount {
   display: flex;
   justify-content: flex-end;

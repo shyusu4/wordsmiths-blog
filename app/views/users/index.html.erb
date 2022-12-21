@@ -1,10 +1,10 @@
 <h1>Blog App</h1>
 <div class="users-container">
     <% @users.each do |user| %>
-        <div class="user-item" href="users/<%= user.id %>">
+        <div class="user-item">
             <img class="user-img" src=<%= user.photo %> alt=<%= user.name %>>
             <div class="user-item__content">
-                <h3 class="username"><%= user.name %></h3>
+                <a class="username" href="users/<%= user.id %>"><%= user.name %></a>
                 <p><%= user.bio[0..100] %></p>
                 <div class="postscount">
                     <p>Number of posts: <%= user.posts.count %></p>
