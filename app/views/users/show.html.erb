@@ -25,7 +25,15 @@
         <div>
         <% end %>
 </div>
-<a class="allposts" href="/users/<%= @user.id %>/posts">
+
+<% if @current_user %>
+<a href="/users/<%= @user.id %>/posts/new">
+<button class="allposts-btn">
+        Create new post
+</button></a>
+<% end %>
+
+<a href="/users/<%= @user.id %>/posts">
 <button class="allposts-btn">
         See all posts
 </button></a>

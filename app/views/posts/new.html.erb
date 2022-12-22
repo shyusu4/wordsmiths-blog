@@ -1,5 +1,6 @@
-<div class="new-post">
-  <h1>Create New Post</h1>
+<div class="createpost-container">
+<h2>Create New Post</h2>
+<div class="form-input">
     <%= form_with model: @posts do |form| %>
     <div>
         <%= form.label :title %>
@@ -9,8 +10,9 @@
         <%= form.label :text %>
         <%= form.text_field :text %>
     </div>
-    <div>
-        <%= form.submit "Create Post" %>
     </div>
+    <a class="createpost-btn">
+        <%= form.submit "Create Post" %>
+    </a>
     <% end %>
 </div>
