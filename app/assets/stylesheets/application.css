@@ -22,18 +22,28 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: #f6fff8;
+}
+
 h1 {
   text-align: center;
   margin: 1rem;
 }
 
-.users-container {
+h4 {
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+.users-container,
+.user-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.user-item {
+.user-card {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -41,9 +51,10 @@ h1 {
   gap: 1rem;
 }
 
-.user-item__content {
-  padding: 2.5rem 1rem;
-  border: 1px solid #ccc;
+.user-card__content {
+  padding: 3rem 1rem;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  background-color: #eaf4f4;
   width: 35rem;
   border-radius: 5px;
   text-decoration: none;
@@ -71,4 +82,32 @@ h1 {
 .postscount {
   display: flex;
   justify-content: flex-end;
+}
+
+.user-bio,
+.user-post__content {
+  padding: 0.5rem 1rem;
+  margin-top: 1.5%;
+  width: 45rem;
+  border-radius: 5px;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  background-color: #eaf4f4;
+}
+
+.allposts {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.allposts-btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background-color: #accbe1;
+  color: #274c77;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  font-weight: bold;
+  border: none;
 }

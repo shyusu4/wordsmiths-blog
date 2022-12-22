@@ -1,1 +1,31 @@
-<h1> List of user by given id </h1>
+<div class="user-container">
+        <div class="user-card">
+            <img class="user-img" src=<%= @user.photo %> alt=<%= @user.name %>>
+            <div class="user-card__content">
+                <h3 class="user-name"><%= @user.name %></h3>
+                <div class="postscount">
+                    <p>Number of posts: <%= @user.posts.count %></p>
+                </div>
+            </div>
+        </div>
+    <div class="user-bio">
+        <h4>Bio</h4>
+        <p><%= @user.bio %></p>
+    </div>
+        <% @user.recent_posts.each do |post| %>
+        <div class="user-post__item">
+            <div class="user-post__content">
+                <h4><%= post.title %></h4>
+                <p><%= post.text[0..150] %></p>
+                <div class="postscount">
+                    <span>Comments: <%= post.comments_counter %>,</span>
+                    <span>Likes: <%= post.likes_counter %></span>
+                </div>
+            </div>
+        <div>
+        <% end %>
+</div>
+<a class="allposts" href="/users/<%= @user.id %>/posts">
+<button class="allposts-btn">
+        See all posts
+</button></a>
