@@ -1,1 +1,20 @@
-<h1> List of post by given id </h1>
+<div class="post-container">
+<div class="user-post__content">
+    <h3><%= @post.title %><span class="author"> by <%= @user.name %></span></h3>
+    <div class="postscount">
+                    <span>Comments: <%= @post.comments_counter %>,</span>
+                    <span>Likes: <%= @post.likes_counter %></span>
+                </div>
+    <p><%= @post.text %></p>
+    </div>
+    <div class="user-comment__item">
+                <% @post.comments.each do |comment| %>
+                <div class="user-comment__content">
+                            <b><%= User.find(comment.author_id).name %></b>
+                            <span class="comment-date"><%= comment.created_at %></span>
+                </div>
+                            <p class="comment"><%= comment.text %></p>
+                <% end %>
+                </div>
+    </div>
+</div>
