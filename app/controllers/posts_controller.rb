@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to user_posts_path(id: @post.author_id)
     else
-      render :new
+      render :new, alert: 'Error: Post not saved.'
     end
   end
 
