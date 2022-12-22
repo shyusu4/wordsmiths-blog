@@ -37,10 +37,16 @@ h4 {
 }
 
 .users-container,
-.user-container {
+.user-container,
+.posts-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.posts-container a {
+  text-decoration: none;
+  color: black;
 }
 
 .user-card {
@@ -85,13 +91,23 @@ h4 {
 }
 
 .user-bio,
-.user-post__content {
+.user-post__content,
+.user-comment__item {
   padding: 0.5rem 1rem;
   margin-top: 1.5%;
   width: 45rem;
   border-radius: 5px;
   box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
   background-color: #eaf4f4;
+}
+
+.user-comment__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment {
+  padding: 0.5rem 0 2rem;
 }
 
 .allposts {
@@ -110,4 +126,8 @@ h4 {
   box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
   font-weight: bold;
   border: none;
+}
+
+.pagination {
+  margin: 1rem 0;
 }

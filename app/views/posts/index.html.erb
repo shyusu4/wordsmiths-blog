@@ -1,1 +1,38 @@
-<h1> List of posts by given user </h1>
+<div class="posts-container">
+    <div class="user-card">
+            <img class="user-img" src=<%= @user.photo %> alt=<%= @user.name %>>
+            <div class="user-card__content">
+                <h3 class="user-name"><%= @user.name %></h3>
+                <div class="postscount">
+                    <p>Number of posts: <%= @user.posts.count %></p>
+                </div>
+            </div>
+        </div>
+    <% @user.recent_posts.each do |post| %>
+    <a href=<%= user_post_path(@user.id, post.id) %>>
+        <div class="user-post__item">
+            <div class="user-post__content">
+                <h4><%= post.title %></h4>
+                <p><%= post.text[0..150] %></p>
+                <div class="postscount">
+                    <span>Comments: <%= post.comments_counter %>,</span>
+                    <span>Likes: <%= post.likes_counter %></span>
+                </div>
+            </div>
+        <div>
+        </a>
+        <div class="user-comment__item">
+                <% post.comments.each do |comment| %>
+                <div class="user-comment__content">
+                            <b><%= User.find(comment.author_id).name %></b>
+                            <span class="comment-date"><%= comment.created_at %></span>
+                </div>
+                            <p class="comment"><%= comment.text %></p>
+                <% end %>
+                </div>
+        <% end %>
+</div>
+<a class="allposts">
+<button class="allposts-btn pagination">
+        Pagination
+</button></a>
