@@ -13,3 +13,128 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f6fff8;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+h4 {
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+.users-container,
+.user-container,
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.posts-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 2%;
+  gap: 1rem;
+}
+
+.user-card__content {
+  padding: 3rem 1rem;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  background-color: #eaf4f4;
+  width: 35rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.user-img {
+  width: 9rem;
+  height: auto;
+  border-radius: 5px;
+}
+
+.username {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.username:hover {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #274c77;
+}
+
+.postscount {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-bio,
+.user-post__content,
+.user-comment__item {
+  padding: 0.5rem 1rem;
+  margin-top: 1.5%;
+  width: 45rem;
+  border-radius: 5px;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  background-color: #eaf4f4;
+}
+
+.user-comment__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment {
+  padding: 0.5rem 0 2rem;
+}
+
+.allposts {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.allposts-btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background-color: #accbe1;
+  color: #274c77;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  font-weight: bold;
+  border: none;
+}
+
+.pagination {
+  margin: 1rem 0;
+}
