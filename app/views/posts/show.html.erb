@@ -18,6 +18,7 @@
                 </div>
     </div>
 </div>
+<%= link_to 'Like ', "#{request.url}/likes/new" %>
 <a href="/users/<%= @user.id %>/posts/<%= @post.id %>/comments/new">
 <button class="comment-btn">
         Add comment
