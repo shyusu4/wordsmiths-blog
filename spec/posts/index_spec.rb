@@ -25,4 +25,36 @@ RSpec.describe 'Post index', type: :feature do
     visit user_posts_path(@first_user)
     expect(page).to have_content @first_user.name
   end
+
+  it 'should display number of posts' do
+    visit user_posts_path(@first_user)
+    expect(page).to have_content "Number of posts: #{@first_user.posts_counter}"
+  end
+
+  it 'should display first comments' do
+    visit user_posts_path(@first_user)
+    @first_post.recent_comments.each do |comment|
+      expect(page).to have_content(comment.text)
+    end
+  end
+
+  it 'should display number of comments' do
+    visit user_posts_path(@second_user)
+    expect(page).to have_content("Comments: #{@second_post.comments_counter}")
+  end
+
+  it 'should display number of likes' do
+    visit user_posts_path(@first_user)
+    expect(page).to have_content("Likes: #{@first_post.likes_counter}")
+  end
+
+  it 'should display post title' do
+    visit user_posts_path(@first_user)
+    expect(page).to have_content @first_post.title
+  end
+
+  it 'should display post body' do
+    visit user_posts_path(@second_user)
+    expect(page).to have_content @second_post.text[0..150]
+  end
 end
