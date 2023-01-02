@@ -87,10 +87,15 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     debug (1.7.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
-    diff-lcs (1.5.0)
     erubi (1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -106,6 +111,10 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.3)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -178,23 +187,6 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
-    rspec-core (3.12.0)
-      rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.0)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.12.0)
-    rspec-mocks (3.12.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.12.0)
-    rspec-rails (6.0.1)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      railties (>= 6.1)
-      rspec-core (~> 3.11)
-      rspec-expectations (~> 3.11)
-      rspec-mocks (~> 3.11)
-      rspec-support (~> 3.11)
-    rspec-support (3.12.0)
     rubocop (1.39.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -258,14 +250,15 @@ DEPENDENCIES
   bootsnap
   bullet
   capybara
+  database_cleaner
   debug
   importmap-rails
   jbuilder
+  letter_opener (~> 1.8, >= 1.8.1)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
   rails-controller-testing
-  rspec-rails (>= 3.9.0)
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   sprockets-rails
