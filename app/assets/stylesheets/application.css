@@ -26,7 +26,8 @@ body {
   background-color: #f6fff8;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
   margin: 1rem;
 }
@@ -123,7 +124,17 @@ h4 {
   text-decoration: none;
 }
 
-.allposts-btn {
+.user-action {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.allposts-btn,
+.comment-btn,
+.like-btn,
+.createpost-btn input {
   cursor: pointer;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -133,8 +144,34 @@ h4 {
   box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
   font-weight: bold;
   border: none;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .pagination {
   margin: 1rem 0;
+}
+
+.createpost-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
+  background-color: #eaf4f4;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  outline: none;
 }
