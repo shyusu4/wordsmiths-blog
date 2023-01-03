@@ -33,9 +33,9 @@ RSpec.describe 'User index', type: :feature do
 
   it 'should display number of posts by given user' do
     visit users_path(@first_user)
-    expect(page).to have_content('0 Posts')
+    expect(page).to have_content('Number of posts: 1')
     visit users_path(@second_user)
-    expect(page).to have_content('0 Posts')
+    expect(page).to have_content('Number of posts: 1')
   end
 
   it 'should redirect to user show page' do
