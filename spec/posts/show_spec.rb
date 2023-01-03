@@ -15,4 +15,43 @@ RSpec.describe 'Post show', type: :feature do
     Like.create(post: @first_post, author: @second_user)
     Like.create(post: @first_post, author: @first_user)
   end
+
+  it 'should display post title' do
+    visit user_post_path(@first_post, @first_user)
+    expect(page).to have_content @first_post.title
+  end
+
+  it 'should display post body' do
+    visit user_post_path(@second_post, @second_user)
+    expect(page).to have_content @second_post.text[0..150]
+  end
+
+  it 'should display post author' do
+    visit user_post_path(@first_post, @first_user)
+    expect(page).to have_content @first_post.author.name
+  end
+
+  it 'should display comments count' do
+    visit user_post_path(@first_post, @first_user)
+    expect(page).to have_content("Comments: #{@first_post.comments_counter}")
+  end
+
+  it 'should display likes count' do
+    visit user_post_path(@second_post, @second_user)
+    expect(page).to have_content("Likes: #{@second_post.likes_counter}")
+  end
+
+  it 'should display commenters name' do
+    visit user_post_path(@second_post, @second_user)
+    @second_post.comments.each do |comment|
+      expect(page).to have_content comment.author.name
+    end
+  end
+
+  it 'should display comment' do
+    visit user_post_path(@second_post, @second_user)
+    @second_post.comments.each do |comment|
+      expect(page).to have_content comment.text
+    end
+  end
 end
