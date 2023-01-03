@@ -63,7 +63,7 @@ RSpec.describe 'Post index', type: :feature do
     visit user_posts_path(@second_user)
     expect(page).to have_content @second_post.text[0..150]
   end
-  
+
   it 'should redirect to post show page' do
     visit user_posts_path(@first_user)
     click_link(@first_post.title)
