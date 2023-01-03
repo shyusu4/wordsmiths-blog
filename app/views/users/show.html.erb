@@ -13,7 +13,7 @@
         <p><%= @user.bio %></p>
     </div>
         <% @user.recent_posts.each do |post| %>
-        <a id="<%=post.id%>" href=<%= user_post_path(@user.id, post.id) %>>
+        <a id="post-<%=post.id%>" href=<%= user_post_path(@user.id, post.id) %>>
         <div class="user-post__item">
             <div class="user-post__content">
                 <h4><%= post.title %></h4>
