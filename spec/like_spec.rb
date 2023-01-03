@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Like, type: :model do
+RSpec.describe Like, type: :model do
   context 'test likes' do
     before :each do
       @user = User.create(name: 'Jennie', photo: 'https://unsplash.com/photos/Th-i7Z1ufK8', bio: 'Artist')
