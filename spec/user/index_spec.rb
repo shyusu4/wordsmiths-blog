@@ -21,4 +21,26 @@ RSpec.describe 'User index', type: :feature do
     Like.create(post: @first_post, author: @second_user)
     Like.create(post: @first_post, author: @first_user)
   end
+  it 'should display username' do
+    visit users_path(@first_user)
+    expect(page).to have_content @first_user.name
+  end
+
+  it 'should display users profile picture' do
+    visit users_path(@first_user)
+    expect(page).to have_css("img[src*='#{@first_user.photo}']")
+  end
+
+  it 'should display number of posts by given user' do
+    visit users_path(@first_user)
+    expect(page).to have_content('0 Posts')
+    visit users_path(@second_user)
+    expect(page).to have_content('0 Posts')
+  end
+
+  it 'should redirect to user show page' do
+    visit users_path(@first_user)
+    click_link @first_user.name.to_s
+    expect(current_path).to eq user_path(@first_user)
+  end
 end
