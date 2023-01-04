@@ -139,7 +139,8 @@ a {
 .allposts-btn,
 .comment-btn,
 .like-btn,
-.createpost-btn input {
+.createpost-btn input,
+.actions input {
   cursor: pointer;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -170,7 +171,8 @@ a {
   border-radius: 10px;
 }
 
-.form-input input {
+.form-input input,
+.field input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
