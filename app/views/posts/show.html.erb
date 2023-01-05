@@ -12,9 +12,9 @@
                 <div class="user-comment__content">
                             <b><%= User.find(comment.author_id).name %></b>
                             <span class="comment-date"><%= comment.created_at %></span>
-                            <% if can? :destroy, @comment %>
-                                <%= button_to "Delete", comment_destroy_path(@user.id, @comment.id), method: :delete  %>
-                            <% end %>
+                            <% if can? :destroy, @post %>
+<%= button_to "Delete", comment_destroy_path(@user, @post, comment.id), method: :delete %>
+<% end %>
                             
                 </div>
                             <p class="comment"><%= comment.text %></p>
