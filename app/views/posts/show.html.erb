@@ -12,6 +12,10 @@
                 <div class="user-comment__content">
                             <b><%= User.find(comment.author_id).name %></b>
                             <span class="comment-date"><%= comment.created_at %></span>
+                            <% if can? :destroy, @post %>
+<%= button_to "Delete", comment_destroy_path(@user, @post, comment.id), method: :delete %>
+<% end %>
+                            
                 </div>
                             <p class="comment"><%= comment.text %></p>
                 <% end %>
@@ -19,7 +23,13 @@
     </div>
 </div>
 <div class="user-action">
+
+<% if can? :destroy, @post %>
+    <%= button_to 'Delete', user_post_path(@user.id, @post.id), :method => :delete, class: 'comment-btn', style: 'background-color: red' %>
+<% end %>
+
 <%= link_to 'Like ', "#{request.url}/likes/new", class:"like-btn" %>
+
 <a href="/users/<%= @user.id %>/posts/<%= @post.id %>/comments/new">
 <button class="comment-btn">
         Add comment

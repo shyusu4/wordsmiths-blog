@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
   end
@@ -10,5 +12,11 @@ class CommentsController < ApplicationController
     else
       render :new, alert: 'Error: Comment not saved.'
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:comment_id])
+    @comment.destroy
+    redirect_to user_post_path(params[:author_id], params[:id])
   end
 end
