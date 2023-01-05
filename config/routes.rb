@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # will match a GET/POST request to the given URL and send it to the corresponding action in the CommentsController.
   get 'users/:author_id/posts/:id/comments/new' => 'comments#new', as: "comments_new"
   post 'users/:author_id/posts/:id/comments' => 'comments#create', as: "comment"
-  delete 'users/:author_id/posts/:id/comments/:comment_id' => 'comments#destroy'
+  delete 'users/:author_id/posts/:id/comments/:comment_id' => 'comments#destroy', as: "comment_destroy"
 
   # will match a GET request to the given URL and send it to the create action in the LikesController.
   get 'users/:author_id/posts/:id/likes/new' => 'likes#create', as: "likes_create"
