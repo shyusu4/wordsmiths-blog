@@ -21,7 +21,7 @@
 
 # 📖 Blog App <a name="about-project"></a>
 
-> Rails webapp that shows the list of posts and empowers readers to interact with them by adding comments and liking posts.
+> A RoR blog web application that allows users to create posts, comment on posts, and like posts. The application provides an easy-to-use interface for creating and managing posts, and allows users to interact with each other's posts through comments and likes. With this application, users have a platform to share their thoughts and ideas with the world.
 
 ## 🛠 Built With <a name="built-with"></a>
 
