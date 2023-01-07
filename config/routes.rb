@@ -1,6 +1,26 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "users#index", as: "users"
+
+  devise_scope :user do
+    authenticated :user do
+      root :to => 'users#show', as: :authenticated_root
+    end
+    unauthenticated :user do
+      root :to => 'devise/registrations#new', as: :unauthenticated_root
+    end
+  end
+
+  # creating a route for the API
+  namespace :api do
+    namespace :v1 do
+      resources :users do
+        resources :posts, format: :json do 
+          resources :comments, format: :json 
+        end
+      end
+    end
+  end
+
   # will match a GET request to the given URL and send it to the show action in the UsersController.
   get 'users/:id' => 'users#show', as: "user"
 
