@@ -59,13 +59,19 @@ Run tests using this command:
 rspec spec
 ```
 
-## Author <a name="authors"></a>
+## Authors <a name="authors"></a>
 
-Shakhrizoda Yusupova
+**Shakhrizoda Yusupova**
 
 - GitHub: [@shyusu4](https://github.com/shyusu4)
 - Twitter: [@shyusu4](https://twitter.com/shyusu4)
 - LinkedIn: [Shakhrizoda Yusupova](https://www.linkedin.com/in/shyusu4/)
+
+**Josh Batey**
+
+- GitHub: [@Bateyjosue](https://github.com/Bateyjosue)
+- Twitter: [@JosueBatey](https://twitter.com/JosueBatey)
+- LinkedIn: [Josh Batey](https://www.linkedin.com/in/josue-ishara/)
 
 ## Future Features <a name="future-features"></a>
 
