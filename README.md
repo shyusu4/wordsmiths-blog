@@ -15,8 +15,11 @@
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
-# Blog App <a name="about-project"></a>
+# WordSmiths <a name="about-project"></a>
 
+![ezgif-1-d3ac6ad58c](https://user-images.githubusercontent.com/106587342/218711844-a5f6d236-e055-44da-b920-98019e66502f.gif)
+
+  
 > A Ruby on Rails blog web application that allows users to create posts, comment on posts, and like posts. The application provides an easy-to-use interface for creating and managing posts, and allows users to interact with each other's posts through comments and likes. With this application, users have a platform to share their thoughts and ideas with the world.
 
 ## Built With <a name="built-with"></a>
