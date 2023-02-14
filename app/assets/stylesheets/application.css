@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,800&display=swap');
 
 * {
   margin: 0;
@@ -23,23 +24,54 @@
 }
 
 body {
-  background-color: #f6fff8;
+  padding: 0 150px;
 }
 
 h1,
-h2 {
-  text-align: center;
-  margin: 1rem;
-}
-
+h2,
+h3,
 h4 {
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
+  font-weight: 500;
+  color: #5a5a5a;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.title {
+  font-size: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: 'wght' 311;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.8rem;
+  color: #001f54;
+  outline: none;
+  text-align: center;
+}
+
+.title:hover {
+  font-variation-settings: 'wght' 582;
+  letter-spacing: 1px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.about-container__tagline {
+  padding-bottom: 1rem;
+}
+
+.about-container__content {
+  line-height: 150%;
+  color: gray;
 }
 
 .users-container,
@@ -66,30 +98,29 @@ a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-top: 2%;
+  margin-bottom: 2%;
   gap: 1rem;
 }
 
 .user-card__content {
-  padding: 3rem 1rem;
-  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
-  background-color: #eaf4f4;
-  width: 35rem;
-  border-radius: 5px;
+  padding: 2.5rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px;
+  width: 31rem;
+  border-radius: 10px;
   text-decoration: none;
 }
 
 .user-img {
-  width: 9rem;
+  width: 8rem;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .username {
   font-size: 20px;
   text-decoration: none;
-  color: black;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .username:hover {
@@ -108,10 +139,10 @@ a {
 .user-comment__item {
   padding: 0.5rem 1rem;
   margin-top: 1.5%;
-  width: 45rem;
+  width: 40rem;
   border-radius: 5px;
-  box-shadow: rgba(141, 136, 136, 0.2) 0 2px 8px 0;
-  background-color: #eaf4f4;
+  background-color: #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px;
 }
 
 .user-comment__content {

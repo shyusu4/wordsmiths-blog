@@ -1,4 +1,9 @@
-<h1>Blog App</h1>
+<%= render "shared/title" %>
+<div class="main-container">
+<div class="about-container">
+<h2 class="about-container__tagline">Writing Together, Growing Together</h2>
+<p class="about-container__content">We are an open platform writing community dedicated to helping writers of all levels grow and succeed. Our supportive, collaborative environment encourages members to explore their creativity and create meaningful connections with other writers. Join us and become a part of our growing, vibrant community.</p>
+</div>
 <div class="users-container">
     <% @users.each do |user| %>
         <div class="user-card">
@@ -11,4 +16,5 @@
             </div>
         </div>
     <% end %>
+</div>
 </div>
